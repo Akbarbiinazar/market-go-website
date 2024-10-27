@@ -23,45 +23,31 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+       
+        purple: '#7148CA', // Primary purple
+        pink: '#C5436B', // Pink for gradients
+        magenta: '#AA24AC', // Magenta for gradients
+        blue: '#0689FF', // Bright blue for gradients
+        lightBlue: '#7AC8FF', // Light blue for borders/gradients
+        darkBlue: '#547BED', // Dark blue for borders/gradients
+        lightPink: '#FF719D', // Light pink for borders/gradients
+
+        // Semantic mappings
+        border: {
+          primary: '#7148CA', 
+          secondary: '#6E679C', 
         },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
+        gradient: {
+          text: {
+            pink: '#C5436B',
+            magenta: '#AA24AC',
+            blue: '#0689FF',
+          },
+          border: {
+            lightBlue: '#7AC8FF',
+            darkBlue: '#547BED',
+            lightPink: '#FF719D',
+          },
         },
       },
     },
