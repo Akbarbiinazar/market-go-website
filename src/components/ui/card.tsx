@@ -1,20 +1,36 @@
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
+import { twMerge } from 'tailwind-merge';
 
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      'rounded-lg border bg-card text-card-foreground shadow-sm',
-      className
-    )}
-    {...props}
-  />
-));
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  hasGradientBorder?: boolean;
+}
+
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  ({ className, hasGradientBorder = false, ...props }, ref) => (
+    <div
+      className={twMerge(
+        'p-[2px]',
+        hasGradientBorder
+          ? 'to-purple-500 rounded-lg bg-gradient-to-r from-blue-500'
+          : '',
+        className
+      )}
+    >
+      <div
+        ref={ref}
+        className={cn(
+          'bg-card text-card-foreground rounded-lg border shadow-sm',
+          hasGradientBorder ? 'bg-white' : '', // Inner content background to override gradient
+          className
+        )}
+        {...props}
+      />
+    </div>
+  )
+);
+
 Card.displayName = 'Card';
 
 const CardHeader = React.forwardRef<
@@ -50,7 +66,7 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={cn('text-muted-foreground text-sm', className)}
     {...props}
   />
 ));

@@ -11,7 +11,15 @@ const config: Config = {
     extend: {
       fontSize: {
         base: '12px',
+        "xs": "10px",
+        "4xl": "40px",
+        "5xl": "45px",
       },
+      lineHeight: {
+        "10": '47px',
+        "12": "58.5px"
+      },
+
       spacing: {
         small: '4px',
         medium: '8px',
@@ -27,9 +35,13 @@ const config: Config = {
         purple: '#7148CA', // Primary purple
         pink: '#C5436B', // Pink for gradients
         magenta: '#AA24AC', // Magenta for gradients
-        blue: '#0689FF', // Bright blue for gradients
-        lightBlue: '#7AC8FF', // Light blue for borders/gradients
-        darkBlue: '#547BED', // Dark blue for borders/gradients
+        magenta_300: '#A527AE',
+        
+        blue_900: "#342F55",
+        blue_500: '#0689FF', // Bright blue for gradients
+        blue_700: '#7879F1',
+        blue_200: '#7AC8FF', // Light blue for borders/gradients
+        blue_800: '#547BED', // Dark blue for borders/gradients
         lightPink: '#FF719D', // Light pink for borders/gradients
 
         // Semantic mappings
