@@ -27,7 +27,7 @@ export default function Layout({
   return (
     <html lang='en'>
       <body
-        className='h-full w-full bg-[#BC66A026]' // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className='h-full w-full ' // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
         {children}

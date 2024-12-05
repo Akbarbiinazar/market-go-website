@@ -3,7 +3,7 @@ import { defineArrayMember, defineField, defineType } from 'sanity';
 
 export const PartnersType = defineType({
   name: 'partners',
-  title: 'Services',
+  title: 'Partners',
   type: 'document',
   icon: DocumentIcon,
   fields: [

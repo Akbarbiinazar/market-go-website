@@ -45,10 +45,10 @@ export const HeroSection = async () => {
   const data = await getData();
 
   return (
-    <section className='flex overflow-x-hidden py-20'>
+    <section className='flex overflow-x-hidden bg-[#BC66A026] py-20'>
       <div className='container mx-auto flex px-4'>
         <div className='flex max-w-[34rem] flex-col gap-[3.625rem]'>
-          <h1 className='leading-12 inline-block bg-gradient-to-r from-pink via-magenta bg-clip-text text-5xl font-extrabold tracking-[0.01em] text-transparent'>
+          <h1 className='inline-block bg-gradient-to-r from-pink via-magenta bg-clip-text text-5xl font-extrabold leading-12 tracking-[0.01em] text-transparent'>
             {data[0].title}
           </h1>
           <p className='text-lg font-light text-[#342F55]'>

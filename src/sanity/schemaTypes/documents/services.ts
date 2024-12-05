@@ -32,6 +32,11 @@ export const ServicesType = defineType({
               type: 'string',
               title: 'Text',
             },
+            {
+              name: 'isGradient',
+              type: 'boolean',
+              title: 'Is Gradient',
+            }
           ],
         }),
       ],

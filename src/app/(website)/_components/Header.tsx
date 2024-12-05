@@ -37,7 +37,7 @@ export const Header = () => {
       {isMobile ? (
         <HeaderMobile />
       ) : (
-        <section className='mt-5'>
+        <section className='bg-[#BC66A026] pt-5'>
           <div className='container mx-auto px-4'>
             <div className='flex justify-between'>
               <div className='flex'>
@@ -56,7 +56,7 @@ export const Header = () => {
                 </p>
                 <Button
                   type='button'
-                  className='border-purple hover:bg-purple rounded-full border bg-transparent px-5 py-2.5 text-xs font-bold leading-4 text-black transition-all duration-300 ease-in-out hover:text-white'
+                  className='rounded-full border border-purple bg-transparent px-5 py-2.5 text-xs font-bold leading-4 text-black transition-all duration-300 ease-in-out hover:bg-purple hover:text-white'
                 >
                   Перезвоните мне
                 </Button>
@@ -88,7 +88,7 @@ function HeaderMobile() {
             <p className='text-base font-bold leading-4'>8 (903) 962-89-72</p>
             {isMenuOpen ? (
               <button onClick={toggleMenu} aria-label='Close Menu'>
-                <BiX className='text-magenta_300 h-6 w-6' />
+                <BiX className='h-6 w-6 text-magenta_300' />
               </button>
             ) : (
               <button
@@ -97,13 +97,13 @@ function HeaderMobile() {
                 aria-label='Toggle Menu'
               >
                 <span
-                  className={`bg-magenta_300 block h-0.5 w-6 transition-all ${isMenuOpen ? 'translate-y-1 rotate-45' : ''}`}
+                  className={`block h-0.5 w-6 bg-magenta_300 transition-all ${isMenuOpen ? 'translate-y-1 rotate-45' : ''}`}
                 ></span>
                 <span
-                  className={`bg-magenta_300 block h-0.5 w-6 transition-all ${isMenuOpen ? 'opacity-0' : ''}`}
+                  className={`block h-0.5 w-6 bg-magenta_300 transition-all ${isMenuOpen ? 'opacity-0' : ''}`}
                 ></span>
                 <span
-                  className={`bg-magenta_300 block h-0.5 w-6 transition-all ${isMenuOpen ? '-translate-y-1 -rotate-45' : ''}`}
+                  className={`block h-0.5 w-6 bg-magenta_300 transition-all ${isMenuOpen ? '-translate-y-1 -rotate-45' : ''}`}
                 ></span>
               </button>
             )}
@@ -112,7 +112,7 @@ function HeaderMobile() {
       </div>
 
       {isMenuOpen && (
-        <div className='unset-0 bg-purple fixed mt-5 w-full opacity-100 transition-opacity'>
+        <div className='unset-0 fixed mt-5 w-full bg-purple opacity-100 transition-opacity'>
           <nav className='flex flex-col items-center justify-center py-5'>
             <ul className='flex flex-col gap-4'>
               {headerCTAs.map((header) => (
@@ -125,7 +125,7 @@ function HeaderMobile() {
               <li>
                 <Button
                   type='button'
-                  className='border-purple hover:bg-purple w-full rounded-full border bg-transparent px-5 py-2.5 text-base font-bold leading-4 text-black transition-all duration-300 ease-in-out hover:text-white'
+                  className='w-full rounded-full border border-purple bg-transparent px-5 py-2.5 text-base font-bold leading-4 text-black transition-all duration-300 ease-in-out hover:bg-purple hover:text-white'
                 >
                   Перезвоните мне
                 </Button>
