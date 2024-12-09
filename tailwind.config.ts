@@ -34,8 +34,11 @@ const config: Config = {
        
         purple: '#7148CA', // Primary purple
         pink: '#C5436B', // Pink for gradients
+        pink_300: "rgba(219, 202, 231, 1)",
+        pink_700: "#f1588a",
         magenta: '#AA24AC', // Magenta for gradients
         magenta_300: '#A527AE',
+        
         
         blue_900: "#342F55",
         blue_500: '#0689FF', // Bright blue for gradients
